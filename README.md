@@ -32,7 +32,7 @@ How?? Did she sell her fancy show horse? Nope, she made several strategic horse 
 Depsite competing as an adult in other horse disciplines, I've always loved horse racing. It brings people together regardless of their motivations, though typically categorized within the following:
 + loving horses 
 + appreciation for high fashion and excessive drinking, looking at you, Derby outfits & mint juleps! 
-+ gambling addiction(s) -- usually in addition either of the first two categories...
++ gambling addiction(s) -- usually in addition to either of the first two categories...
 
 Having grown up around horses and going so far as to becoming an track certified exercise rider in high school, I wondered what were my keys to success when it came to horse racing betting.
 
@@ -198,7 +198,7 @@ Continuing our quest to determine a p-value to help us determine if we can can r
 
 We also know our distributions are very normal. So we do have an a-priori reason to deploy the t-test.
 
-The Student-t distirbution uses degrees of freedom calculated via the Welch_Satterhwaithe equation. The higher the degrees of freedom, the tighter and more normal the distribution becomes. 
+The Student-t distribution uses degrees of freedom calculated via the Welch Satterhwaithe equation. The higher the degrees of freedom, the tighter and more normal the distribution becomes. 
 
 __The calculated degrees of freedom for the sample test is 170.1.__
 <img src="plots/WelchStatDistribTurf.png" />
@@ -212,11 +212,11 @@ Time to get to the p-value! But first, let's take a moment to visualize our samp
 ### P-value
 <a id="pval"> </a>
 If you paid attention in your Stats classes (or use some good old logic). You likely have an approximate p-value range in mind from the above visualization of the sample times for the two racecourse venues.
-But before we get "down to the wire" and calculate our p-value represented by the below probability.
+But before we get "down to the wire" and calculate our p-value represented by the below probability...
 
 <img src="plots/Pvalequation.png" />
 
-We need establish how surprised you need to be to reject the null hypothesis that there is no difference in the average time to race 1200m based on venue. 
+... we need establish how surprised you need to be to reject the null hypothesis that there is no difference in the average time to race 1200m based on venue. 
 
 This is the critical value (alpha) that defines the sensitivity of the testing. It is the False Positive (Type 1 error rate) which implies the rate at which the Null was rejected while it was ultimately True.
 
