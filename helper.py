@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[ ]:
-
-
-get_ipython().run_line_magic('matplotlib', 'inline')
 import math
 import pandas as pd
 import numpy as np
@@ -13,10 +7,6 @@ import scipy as stats
 import matplotlib.pyplot as plt
 from scipy import stats
 from statsmodels.stats.power import TTestIndPower
-
-
-# In[ ]:
-
 
 #helper function group jockey weights into 10 groups of 3 lbs
 
@@ -43,10 +33,6 @@ def group_jockweight(row):
         return "1_class"
     return "other"
 
-
-# In[ ]:
-
-
 #helper function group jockey weights into 8 groups of 100 lbs
 
 def group_horseweight(row):
@@ -68,19 +54,12 @@ def group_horseweight(row):
         return "1_class"
     return "other"
 
-
-# In[ ]:
-
-
 # Welsh's t-test Helper Function
 def welch_test_statistic(sample_1, sample_2):
     numerator = np.mean(sample_1) - np.mean(sample_2)
-    denominator_sq = (np.var(sample_1) / len(sample_1)) +                         (np.var(sample_2) / len(sample_2))
+    denominator_sq = (np.var(sample_1) / len(sample_1)) + \
+                        (np.var(sample_2) / len(sample_2))
     return numerator / np.sqrt(denominator_sq)
-
-
-# In[ ]:
-
 
 
 def welch_satterhwaithe_df(samp_1, samp_2):
@@ -90,10 +69,3 @@ def welch_satterhwaithe_df(samp_1, samp_2):
         ((np.var(samp_1)/ss1)**(2.0)/(ss1 - 1)
          + (np.var(samp_2)/ss2)**(2.0)/(ss2 - 1)))
     return df
-
-
-# In[ ]:
-
-
-
-
