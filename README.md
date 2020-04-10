@@ -22,6 +22,7 @@
 
 ## Motivation
 <a id="motive"> </a>
+***
 Everyone knows a horse girl. That perhaps, slightly weird chick in elementary school who always wrote horse stories in English. That girl in junior high that was really terrible at gym class sports, but yet could kick butt on those Presidential tests like sit up's and timed runs (bales of hay are 70lbs each, that's why). That teenager who in high school wore leggings with suede knee patches before leggings as pants were cool. FYI, she was wearing riding pants so she could jet off after class to train or compete.
 
 What if I told you that weird child, now a late twenties professional, leveraged her horse knowledge (and some statistics!) to make a couple extra g's a month? 
@@ -41,6 +42,7 @@ This is my intial exploration into answering that question.
 
 ## Data
 <a id="data"> </a>
+***
 I wanted to explore horse racing data to determine certain factors that impact the speed of a horse during a race. I also wondered if they were statisitically significant when it came to their relationship with speed.
 
 The data includes racing information from the two racecourse venues in Hong Kong.
@@ -70,7 +72,10 @@ What matters most in horse racing. *__Speed.__* It is a race afterall, right? I 
 
 Looking at my dataset, I wanted to keep as many records as possible to analyze, so I wanted to look at distribution of all records for the time taken to run 1200 meters.
 
-<img src="plots/dfpop_total_time_histo.png" />
+<p align="center">
+  <img width="660" height="300" src="plots/dfpop_total_time_histo.png">
+</p>
+
 
 Welp. What IS that. Why is time over 1200m a trimodal distribution? That doesn't seem "normal". Well, after examining my data further, I knew there was some feature that was splitting the population naturally into 3 different normal distributions. I looked into my dataset and determined the culprit: *race total distance.*
 | distance | count |
@@ -91,10 +96,17 @@ Since my dataset was originally close to 80,000 datapoints. I reduced my analyze
 
 The new distribution looks very normal.
 
-<img src="plots/Population Distribution 1200m_total_time_histo.png" />
+<p align="center">
+  <img width="660" height="300" src="plots/Population Distribution 1200m_total_time_histo.png" >
+</p>
+
 
 From this new population, I wanted to see what features would impact speed. A quick way to look for relationships between features in a dataset is to review the correlations.
-<img src="plots/corr_heatmap.png" />
+
+<p align="center">
+  <img width="660" height="460" src="plots/corr_heatmap.png"  >
+</p>
+
 
 Hm, not very promising. A lot of features that would be valuable to examine are not numerical, they are categorical. This heatmap shows relationships to values that are either calculated from each other (time1, time2, time3 and total_time) or direct common known results of each other. 
 
@@ -102,11 +114,19 @@ E.g. horse age vs prize or win odds vs total time. Horses are grouped into 'fair
 
 Weight would be very interesting to review. I had two options for examining weight. Jockey weight and horse weight. Let's see what that looks like!
 
-<img src="plots/jockweight_total_time_line.png" />
+<p align="center">
+  <img width="700" height="275" src="plots/jockweight_total_time_line.png"   >
+</p>
+
+
 
 Not much to see here. Ultimately a flat trend. Per experience riding, what really matters is the jockey's skill more so than a few incremental lbs. To a horse, a better rider is worth more than a marginally lighter load.
 
-<img src="plots/horseweight_total_time_line.png" />
+<p align="center">
+  <img width="860" height="300" src="plots/horseweight_total_time_line.png"  >
+</p>
+
+
 
 
 Okay this is pretty cool, it looks like there is a slight linear relationship between horseweight and total time to cover 1200m. Pro tip: slight matters in horse racing. Often .00X of a second determines outcomes.
@@ -118,7 +138,11 @@ Regardless, I wated to move on from what appears to be non-independent features.
 ### Evidence for Motivation
 <a id="moto"> </a>
 Apparently, Hong Kong has only 2 racecourse venues: Happy Valley and Sha Tin. Hong Kong is small, that's logical. I wondered if there was a difference between the 1200m times between the two venues.
-<img src="plots/venue_time_1200m_point.png" />
+
+<p align="center">
+  <img width="475" height="325" src="plots/venue_time_1200m_point.png"   >
+</p>
+
 
 Wow, I wasn't expecting that.
 
@@ -128,8 +152,12 @@ To ensure that I am performing a controlled experiment. I had to reduce the popu
 
 Everything from here onward is 1200m races on turf only.
 
-Next, let's take a look at the distributions of these two sub-populations, they could be a good candidate for a hypothesis test. 
-<img src="plots/Overlay_turf_time_samples_histo.png" />
+Next, let's take a look at the distributions of these two sub-populations, they could be a good candidate for a hypothesis test.
+
+<p align="center">
+  <img width="500" height="325" src="plots/Overlay_turf_time_samples_histo.png"   >
+</p>
+
 
 Shown another way, let's take a very large sample (over 80% of total population size) from each of these: 8,000.
 
@@ -137,6 +165,7 @@ Shown another way, let's take a very large sample (over 80% of total population 
 
 ## Hypothesis Testing
 <a id="hypo"> </a>
+***
 ### Set-up
 <a id="setup"> </a>
 + My null hypothesis is that the venue (Happy Valley or Sha Tin) will have no impact on the average horse's speed over a 1200m distance.
@@ -220,9 +249,13 @@ The second p-value calculated answers the final question:
 
 ## Conclusion
 <a id="conclude"> </a>
+***
 
 Although we were able to reject our Null hypothesis and determine that there is a statistically significant difference between the average 1200m running times between the two racecourse venues, we perhaps did not come to any good "traditional" betting insights.
 
 Why? Well, all that we proved was that on average, horses run slightly faster at Sha Tin than they do at Happy Valley. You could perhaps propose a bet (marginally illegal) among friends that a horse will run 1200m under a certain time-- and only make that bet if the race is held at Sha Tin!!
 
-<img src="images/Horse-Racing-Finish-Line.png" />
+<p align="center">
+  <img width="500" height="325" src="images/Horse-Racing-Finish-Line.png"  >
+</p>
+
