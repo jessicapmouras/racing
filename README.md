@@ -22,6 +22,7 @@
 
 ## Motivation
 <a id="motive"> </a>
+***
 Everyone knows a horse girl. That perhaps, slightly weird chick in elementary school who always wrote horse stories in English. That girl in junior high that was really terrible at gym class sports, but yet could kick butt on those Presidential tests like sit up's and timed runs (bales of hay are 70lbs each, that's why). That teenager who in high school wore leggings with suede knee patches before leggings as pants were cool. FYI, she was wearing riding pants so she could jet off after class to train or compete.
 
 What if I told you that weird child, now a late twenties professional, leveraged her horse knowledge (and some statistics!) to make a couple extra g's a month? 
@@ -41,6 +42,7 @@ This is my intial exploration into answering that question.
 
 ## Data
 <a id="data"> </a>
+***
 I wanted to explore horse racing data to determine certain factors that impact the speed of a horse during a race. I also wondered if they were statisitically significant when it came to their relationship with speed.
 
 The data includes racing information from the two racecourse venues in Hong Kong.
@@ -163,6 +165,7 @@ Shown another way, let's take a very large sample (over 80% of total population 
 
 ## Hypothesis Testing
 <a id="hypo"> </a>
+***
 ### Set-up
 <a id="setup"> </a>
 + My null hypothesis is that the venue (Happy Valley or Sha Tin) will have no impact on the average horse's speed over a 1200m distance.
@@ -246,6 +249,7 @@ The second p-value calculated answers the final question:
 
 ## Conclusion
 <a id="conclude"> </a>
+***
 
 Although we were able to reject our Null hypothesis and determine that there is a statistically significant difference between the average 1200m running times between the two racecourse venues, we perhaps did not come to any good "traditional" betting insights.
 
