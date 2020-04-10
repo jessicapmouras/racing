@@ -154,7 +154,7 @@ As the data collected is, essentially, a sample of all total instances, we do no
 
 We can use the following formula to represent the Null Hypothesis ("H" for Happy Valley and "S" for Sha Tin).
 
-$$ \text{Difference in sample averages} \sim normal \biggl( 0, \sqrt{\frac{\sigma^2_H}{sample size} \biggr) + \frac{\sigma^2_S}{\text{sample size}}} \biggr) $$
+<img src="plots/Diffinsampavgs.png" />
 
 Using this estimation of the population variance makes the p-value test less certain. Since we are aiming to be conversative, the traditional Normal distribution is too "precise" to use when calculating p-value.
 
@@ -177,6 +177,7 @@ __The calculated degrees of freedom for the sample test is 170.1.__
 The t-distribution takes in the above calculated degrees of freedom. The high calculated degrees of freedom above means that our distribution is very normal.
 We know this already.
 Time to get to the p-value! But first, let's take a moment to visualize our sample data. See anything interesting that indicates what our p-value is expected to be? Here's a hint:
+
 <img src="plots/SampleScatterHVSTTurf.png" />
 
 ### P-value
@@ -184,7 +185,7 @@ Time to get to the p-value! But first, let's take a moment to visualize our samp
 If you paid attention in your Stats classes (or use some good old logic). You likely have an approximate p-value range in mind from the above visualization of the sample times for the two racecourse venues.
 But before we get "down to the wire" and calculate our p-value represented by the below probability.
 
-$$ P(\text{Observe result equally or more extreme than actual} \mid H_0) $$
+<img src="plots/Pvalequation.png" />
 
 We need establish how surprised you need to be to reject the null hypothesis that there is no difference in the average time to race 1200m based on venue. 
 
@@ -192,15 +193,15 @@ This is the critical value (alpha) that defines the sensitivity of the testing. 
 
 As horse racing is a fast-paced sport with often very small time increments determining outcomes, I set the critical value at 0.01, lower than the standard 0.05.
 
-$$ \alpha = 0.01 $$
+<img src="plots/alpharep.png" />
 
 The first p-value calculated answers this question:
 
 **_Do we have enough evidence to conclude that one racecourse has a statistically significant difference in average times over 1200m on turf from other other venue?_**
 
-+ The p-value for different average times over 1200m on turf between Happy Vally and Sha Tin:
++ The p-value for different average times over 1200m on turf between Happy Valley and Sha Tin:
 
-$$ P(\text{Observe result equally or more extreme than actual} \mid H_0) = 1.64456406652e-3 $$
+<img src="plots/pvaldiff.png" />
 
 + This is below our critical value of 0.01, meaning that we can conclude that there is a difference in average times over 1200m on turf.
 
@@ -212,7 +213,7 @@ The second p-value calculated answers the final question:
 
 + The p-value for Happy Valley racecourse having greater time over 1200m distance on turf than Sha Tin is:
 
-$$ P(\text{Observe result equally or more extreme than actual} \mid H_0) = 8.2228203326e-4 $$
+<img src="plots/pvalgreater.png" />
 
 + Again, we are below our critical value of 0.01.
 + We reject our Null hypothesis again!
