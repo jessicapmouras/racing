@@ -177,6 +177,7 @@ __The calculated degrees of freedom for the sample test is 170.1.__
 The t-distribution takes in the above calculated degrees of freedom. The high calculated degrees of freedom above means that our distribution is very normal.
 We know this already.
 Time to get to the p-value! But first, let's take a moment to visualize our sample data. See anything interesting that indicates what our p-value is expected to be? Here's a hint:
+
 <img src="plots/SampleScatterHVSTTurf.png" />
 
 ### P-value
@@ -198,7 +199,7 @@ The first p-value calculated answers this question:
 
 **_Do we have enough evidence to conclude that one racecourse has a statistically significant difference in average times over 1200m on turf from other other venue?_**
 
-+ The p-value for different average times over 1200m on turf between Happy Vally and Sha Tin:
++ The p-value for different average times over 1200m on turf between Happy Valley and Sha Tin:
 
 $$ P(\text{Observe result equally or more extreme than actual} \mid H_0) = 1.64456406652e-3 $$
 
